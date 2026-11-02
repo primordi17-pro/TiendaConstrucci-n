@@ -1670,7 +1670,7 @@
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
                     <div style="grid-column:1/-1">
                         <label class="form-label">Marca y Tipo *</label>
-                        <input type="text" id="productBrand" required class="form-input" placeholder="Ej: L'Oréal – Tinte Castaño">
+                        <input type="text" id="productBrand" required class="form-input" placeholder="Nombre del producto">
                     </div>
                     <div>
                         <label class="form-label">Color *</label>
@@ -2339,9 +2339,7 @@ function initDatabase() {
                 catDynStore.createIndex('isActive','isActive',{unique:false});
                 // Seed: categorías hoy hardcodeadas en los <select>, para no perder continuidad
                 const seedCategories = [
-                    'Sistema Eléctrico','Motor','Cilindros','Transmisión','Frenos','Suspensión',
-                    'Carrocería','Accesorios','Herramientas','Neumáticos','Rodamientos','Combustible',
-                    'Iluminación','Otros'
+                    'Sistema Eléctrico','Accesorios','Herramientas','Otros'
                 ];
                 seedCategories.forEach(name => catDynStore.add({ name, isActive:true }));
             }
